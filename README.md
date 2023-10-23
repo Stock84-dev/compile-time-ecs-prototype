@@ -27,6 +27,8 @@ Rust compiler will optimize those checks because components are added at compile
 
 ## Architecture
 Main ECS crate is `inception`. Usage is in `esl`.
+Usage examples are in https://github.com/Stock84-dev/compile-time-ecs-prototype/tree/main/engine/esl/examples. Not in a running state (requires custom data).
+Minimal example is in https://github.com/Stock84-dev/compile-time-ecs-prototype/blob/main/workspace/lstok/src/lstok.rs
 
 ## Installation
 Nightly is required because the old code uses it and `inception` uses `type_alias_impl_trait` to simplify the return types of an associated type in traits simpler. 
@@ -41,6 +43,8 @@ cargo doc -p esl --open
 ```bash
 # to get a list of examples
 cargo build --example
+
+This project will not be maintained.
 # to build a specific example
 cargo build --example=custom_indicator
 ```
