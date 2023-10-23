@@ -1,0 +1,42 @@
+[package]
+name = "lstok"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "lstok"
+path = "src/lstok.rs"
+
+[dependencies]
+hlcv_loader = { path = "../../legacy/hlcv_loader" }
+mouse = { path = "../../legacy/mouse" }
+config = { path = "../../legacy/config" }
+# nebuchadnezzar = { path = "../../legacy/nebuchadnezzar" }
+merovingian = { path = "../../legacy/merovingian" }
+inception = { path = "../../inception/inception" }
+esl = { path = "../../engine/esl" }
+esl_utils = { path = "../../engine/esl_utils" }
+engine_strategies = { path = "../../engine/engine_strategies" }
+tokio = { version = "1.11.0", features = ["full"] }
+plotters = { version = "0.2.12" }
+num-traits = "0.2.15"
+yata = { version = "0.6.1", features = ["value_type_f32"], default-features = false }
+chrono = { version = "0.4.24", features = ["serde"] }
+tokio-util = { version = "0.7.7", features = ["compat"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+futures = "0.3.28"
+# bytemuck = { version = "1.13.1", features = ["derive"] }
+bytemuck = { version = "~1.11.0", features = ["derive"] }
+
+[profile.dev]
+debug = false
+
+[profile.release]
+debug = true
+lto = "fat"
+opt-level = 3
+codegen-units = 1
+panic = "abort"
+incremental = false

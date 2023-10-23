@@ -1,0 +1,24 @@
+deny = [
+    'unused_must_use',
+    'must_not_suspend',
+    'bindings_with_variant_name',
+    'const_item_mutation',
+    'deref_nullptr',
+    'improper_ctypes',
+    'improper_ctypes_definitions',
+    'overlapping_range_endpoints',
+    'unconditional_recursion',
+    'unnameable_test_items',
+    'unreachable_patterns', # this prevents a lot of bugs using match
+]
+
+warn = [
+    'unreachable-pub',
+    'unused_crate_dependencies',
+    'unused_extern_crates',
+    'unused_import_braces',
+    'unused_lifetimes',
+    'unused_macro_rules',
+    'unused_qualifications',
+    'unused_tuple_struct_fields',
+]

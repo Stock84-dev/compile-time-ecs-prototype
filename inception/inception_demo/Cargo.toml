@@ -1,0 +1,17 @@
+[package]
+name = "inception_demo"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "inception_demo"
+path = "src/inception_demo.rs"
+
+[dependencies]
+inception = { path = "../inception" }
+
+[profile.release]
+lto = true
+debug = true
+codegen-units = 1

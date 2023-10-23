@@ -1,0 +1,15 @@
+[package]
+name = "engine_strategies"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "engine_strategies"
+path = "src/engine_strategies.rs"
+
+[dependencies]
+esl = { path = "../esl" }
+inception = { path = "../../inception/inception" }
+no-std-compat = { version = "0.4.1", features = [ "alloc" ] }
+# yata = { version = "0.6.1", features = ["value_type_f32"], default-features = false }

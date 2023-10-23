@@ -1,0 +1,15 @@
+[package]
+name = "all_tuples"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+name = "all_tuples"
+path = "src/all_tuples.rs"
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+proc-macro2 = "1.0"

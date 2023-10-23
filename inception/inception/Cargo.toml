@@ -1,0 +1,27 @@
+[package]
+name = "inception"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "inception"
+path = "src/inception.rs"
+
+[dependencies]
+inception_macros = { path = "../../inception/inception_macros/" }
+ergnomics = { path = "../../ergnomics/" }
+derive_more = "0.99.17"
+tinyvec = { version = "1.6.0", features = ["rustc_1_57"] }
+either = { version = "1.8.1", features = [], default-features = false }
+all_tuples = { path = "../../all_tuples/" }
+static_assertions = "1.1.0"
+no-std-compat = { version = "0.4.1", features = [ "alloc" ] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+# What also helps:
+# #[inline(always)]
+# -Zmir-opt-level=4
+#cargo rustc -p lstok --release -- --emit=llvm-ir -C passes="adce break-crit-edges dce dse indvars instcombine aggressive-instcombine jump-threading lcssa loop-deletion loop-reduce loop-rotate loop-simplify loop-unroll loop-unroll-and-jam loweratomic lowerinvoke lowerswitch mem2reg memcpyopt mergereturn reassociate reg2mem sroa sccp simplifycfg sink tailcallelim" -C inline-threshold=4294967295 -Zmir-opt-level=4 -Copt-level=3 -Clto=fat -Cembed-bitcode=yes -Ccode-model=large -C codegen-units=1 -Zfuel=lstok=4294967295 -Zinline-mir=true -Zinline-mir-threshold=4294967295 -Zinline-in-all-cgus=true -Zno-parallel-llvm -Zprint-fuel=lstok -Zunsound-mir-opts=yes

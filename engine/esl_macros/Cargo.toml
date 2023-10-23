@@ -1,0 +1,21 @@
+[package]
+name = "esl_macros"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+name = "esl_macros"
+path = "src/esl_macros.rs"
+
+[dependencies]
+inception_macros_core = { path = "../../inception/inception_macros_core" }
+ergnomics = { path = "../../ergnomics" }
+macros_util = { path = "../../macros_util" }
+syn = { version = "1.0", features = ["full", "extra-traits"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+derive-syn-parse = "0.1.5"
+convert-base = "1.1.2"
+darling = "0.14.4"

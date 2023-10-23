@@ -1,0 +1,44 @@
+[package]
+name = "esl"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "esl"
+path = "src/esl.rs"
+
+[dependencies]
+inception = { path = "../../inception/inception/" }
+inception_macros = { path = "../../inception/inception_macros/" }
+esl_macros = { path = "../esl_macros" }
+ergnomics = { path = "../../ergnomics/" }
+# bytemuck = { version = "1.13.1", features = ["derive"] }
+bytemuck = { version = "~1.11.0", features = ["derive"] }
+tinyvec = "1.6.0"
+# float = { path = "../../float/float" }
+all_tuples = { path = "../../all_tuples/" }
+static_assertions = "1.1.0"
+derive_more = "0.99.17"
+no-std-compat = { version = "0.4.1", features = [ "alloc" ] }
+num-traits = { version = "0.2.15", features = [], default-features = false }
+# yata = { version = "0.6.1", features = ["value_type_f32"], default-features = false }
+# TODO: A dependency of `packed_struct` called `funty` fails to compile for CUDA, use different library like https://crates.io/crates/bondrewd
+packed_struct = { version = "0.10.1", features = [], default-features = false }
+
+[dev-dependencies]
+hlcv_loader = { path = "../../legacy/hlcv_loader" }
+mouse = { path = "../../legacy/mouse" }
+config = { path = "../../legacy/config" }
+esl_utils = { path = "../esl_utils" }
+merovingian = { path = "../../legacy/merovingian" }
+engine_strategies = { path = "../../engine/engine_strategies" }
+tokio = { version = "1.11.0", features = ["full"] }
+memoffset = "0.8.0"
+cust = "0.3.2"
+image = "=0.23.0"
+jpeg-decoder = "=0.2.6"
+
+# [profile.release]
+# lto = "full"
+# codegen-units = 1

@@ -1,0 +1,14 @@
+[package]
+name = "inception_macros_core"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "inception_macros_core"
+path = "src/inception_macros_core.rs"
+
+[dependencies]
+syn = { version = "1.0", features = ["full"] }
+proc-macro2 = "1.0.56"
+quote = "1.0"

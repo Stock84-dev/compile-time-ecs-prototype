@@ -1,0 +1,34 @@
+[package]
+name = "speedy"
+version = "0.7.1"
+authors = ["Jan Bujak <j@exia.io>"]
+repository = "https://github.com/koute/speedy"
+homepage = "https://github.com/koute/speedy"
+documentation = "https://docs.rs/speedy/*/speedy/"
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["serialization"]
+categories = ["encoding"]
+description = "A fast binary serialization framework"
+edition = "2018"
+
+[dependencies]
+speedy-derive = { version = "= 0.7.1", path = "speedy-derive", optional = true }
+chrono = { version = "0.4", optional = true }
+smallvec = { version = "1", optional = true }
+
+[dev-dependencies]
+quickcheck = "0.9"
+
+[profile.release]
+panic = "abort"
+
+[workspace]
+members = [".", "speedy-derive", "static-tests"]
+
+[features]
+default = ["speedy-derive"]
+external_doc = []
+
+[package.metadata.docs.rs]
+features = ["external_doc"]

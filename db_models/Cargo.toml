@@ -1,0 +1,11 @@
+[package]
+name = "db_models"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2021"
+
+[lib]
+name = "db_models"
+path = "src/db_models.rs"
+
+[dependencies]

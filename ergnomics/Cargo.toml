@@ -1,0 +1,12 @@
+[package]
+name = "ergnomics"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "ergnomics"
+path = "src/ergnomics.rs"
+
+[dependencies]
+num-traits = { version = "0.2.15", features = ["libm"], default-features = false }

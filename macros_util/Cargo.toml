@@ -1,0 +1,14 @@
+[package]
+name = "macros_util"
+version = "0.1.0"
+authors = ["Stock84-dev <leontk8@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "macros_util"
+path = "src/macros_util.rs"
+
+[dependencies]
+proc-macro-crate = "^1.2.0"
+proc-macro2 = "1.0"
+quote = "1.0"

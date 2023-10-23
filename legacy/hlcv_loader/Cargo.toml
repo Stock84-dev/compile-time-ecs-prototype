@@ -1,0 +1,16 @@
+[package]
+name = "hlcv_loader"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mouse = { path = "../mouse" }
+config = { path = "../config" }
+nebuchadnezzar = { path = "../nebuchadnezzar" }
+merovingian = { path = "../merovingian" }
+chrono = "0.4.19"
+memmap2 = "0.3.1"
+tokio = { version = "1.11.0", features = ["full"] }
+futures-util = { version = "0.3.14", features = ["sink"] }

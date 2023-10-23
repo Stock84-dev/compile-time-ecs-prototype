@@ -1,0 +1,34 @@
+[workspace]
+resolver="2"
+members = [
+    "engine/esl",
+    "engine/esl_utils",
+    "engine/esl_macros",
+    "engine/engine_strategies",
+    "all_tuples",
+    "inception/*",
+    "workspace/*",
+    # "legacy/*",
+    # "legacy/deps/*",
+    "macros_util",
+    # "fun",
+    # "float/*",
+]
+exclude = [
+    ".idea",
+    ".vscode",
+    # "engine/cuda_demo",
+    "engine/fun",
+    "legacy/deps",
+    # "engine/engine_compiler_internal"
+]
+
+#default profile for all crates
+[profile.dev]
+#debug = 1
+#debug = 1 # store only line tables
+[profile.release]
+debug = true
+
+[workspace.metadata.cauwugo]
+bpaf = true
