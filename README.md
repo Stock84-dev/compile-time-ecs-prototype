@@ -44,7 +44,8 @@ cargo doc -p esl --open
 # to get a list of examples
 cargo build --example
 
-This project will not be maintained.
 # to build a specific example
 cargo build --example=custom_indicator
 ```
+
+This project will not be maintained.
